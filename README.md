@@ -8,9 +8,9 @@ ORM Generator is console application made in C++ programming language
 
 Programming language and frameworks:
 
-    - Qt Framework
+- Qt Framework
 
 Databases:
 
-    - MySQL
-    - SQLite
+- MySQL
+- SQLite
