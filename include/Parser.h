@@ -15,16 +15,34 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <iostream>
+#ifndef _ORM_PARSER_H_
+#define _ORM_PARSER_H_
 
-#include "Parser.h"
+#include <string>
+#include <memory>
+#include <nlohmann/json.hpp>
 
-int main(int argc, char *argv[])
+#include "data/DConfig.h"
+
+namespace orm
 {
-    orm::Parser parser;
-    parser.parseFile("example.json");
-    auto config = parser.getConfig();
-    std::cout << *config << std::endl;
 
-    return 0;
-}
+class Parser
+{
+public:
+    Parser(void);
+    ~Parser(void);
+
+    void parseFile(const std::string &filePath);
+
+    inline std::shared_ptr<DConfig> getConfig(void) { return m_config; };
+
+private:
+    void parseConfig(const nlohmann::json &json);
+
+    std::shared_ptr<DConfig> m_config;
+};
+
+};
+
+#endif // _ORM_PARSER_H_

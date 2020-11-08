@@ -16,6 +16,10 @@ set(JSON_BuildTests OFF CACHE INTERNAL "")
 add_subdirectory(lib/json)
 
 set(project_SRC
+    src/data/DConfig.cpp
+
+    src/Parser.cpp
+
     src/main.cpp
 )
 
