@@ -17,6 +17,7 @@ add_subdirectory(lib/json)
 
 set(project_SRC
     src/data/DConfig.cpp
+    src/data/DOrmField.cpp
 
     src/Parser.cpp
 

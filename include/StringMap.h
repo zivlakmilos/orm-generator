@@ -44,6 +44,9 @@ public:
     inline std::string string(const T &key) const { return m_keyStringMap.at(key); }
     inline T value(const std::string &key) const { return m_stringKeyMap.at(key); }
 
+    inline bool findKey(const T &key) const { return m_keyStringMap.find(key) != m_keyStringMap.end(); }
+    inline bool findString(const std::string &key) const { return m_stringKeyMap.find(key) != m_stringKeyMap.end(); }
+
 private:
     std::unordered_map<T, std::string> m_keyStringMap;
     std::unordered_map<std::string, T> m_stringKeyMap;

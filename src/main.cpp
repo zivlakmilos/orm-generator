@@ -18,6 +18,7 @@
 #include <iostream>
 
 #include "Parser.h"
+#include "data/DOrmField.h"
 
 int main(int argc, char *argv[])
 {
@@ -25,6 +26,9 @@ int main(int argc, char *argv[])
     parser.parseFile("example.json");
     auto config = parser.getConfig();
     std::cout << *config << std::endl;
+
+    orm::DOrmField field;
+    field.typeFromString("List<int>");
 
     return 0;
 }

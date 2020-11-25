@@ -15,14 +15,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef _ORM_DCONFIG_H_
+#define _ORM_DCONFIG_H_
+
 #include <memory>
-#include <nlohmann/json.hpp>
 #include <ostream>
 
 #include "StringMap.h"
-
-#ifndef _ORM_DCONFIG_H_
-#define _ORM_DCONFIG_H_
 
 namespace orm
 {
