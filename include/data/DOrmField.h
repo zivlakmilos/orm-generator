@@ -18,7 +18,6 @@
 #ifndef _ORM_DORM_FIELD_H_
 #define _ORM_DORM_FIELD_H_
 
-#include <memory>
 #include <ostream>
 
 #include "StringMap.h"
@@ -42,10 +41,10 @@ public:
     };
 
     inline std::string getName(void) const { return m_name; }
-    inline std::string getColumnName(void) const { return m_ColumnName; }
+    inline std::string getColumnName(void) const { return m_columnName; }
 
-    inline void setName(const std::string &name) { return m_name; }
-    inline void setColumnName(const std::string &columnName) { return m_ColumnName; }
+    inline void setName(const std::string &name) { m_name = name; }
+    inline void setColumnName(const std::string &columnName) { m_columnName = columnName; }
 
     std::string typeToString(void) const;
 
